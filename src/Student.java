@@ -14,6 +14,10 @@ public class Student extends Human {
     public void reading(){
         System.out.println(name + " is Reading");
     }
+    @Override
+    public String toString() {
+        return "Student{name='" + name + "', roll=" + roll + ", age=" + age + "}";
+    }
 
     public void displayInfo(){
         System.out.println("Student Information");
