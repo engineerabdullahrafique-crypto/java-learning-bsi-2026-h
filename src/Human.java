@@ -14,4 +14,14 @@ public class Human {
         System.out.println(name + " is eating");
     }
 
+    class Heart{
+        private double heartRate;
+        public Heart(double heartRate1){
+            this.heartRate=heartRate1;
+        }
+        public void beat(){
+            System.out.println(name+" heart is beating at "+heartRate);
+        }
+    }
+
 }
