@@ -1,19 +1,17 @@
-public class Triangle extends Shape{
-    double base, height;
+public class Triangle extends Shape {
 
-    public Triangle(double b, double h){
-        this.base=b;
-        this.height=h;
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
     }
 
     @Override
     public void calculateArea() {
-        double res= 0.5 * base * height;
-        System.out.println("Area Of Triangle Is: " + res);
+        double area = 0.5 * base * height;
+        System.out.println("Area of Triangle is: " + area);
     }
 
-    public static void main(String[] args){
-        Triangle t1=new Triangle(4,5);
-        t1.calculateArea();
-    }
 }
