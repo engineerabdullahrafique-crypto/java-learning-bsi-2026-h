@@ -2,26 +2,28 @@ public class Human {
 
     protected String name;
     protected int age;
-    protected String gendre;
+    protected String gender;
 
-    public Human(String n, int age, String g){
-        this.name = n;
+    public Human(String name, int age, String gender) {
+        this.name = name;
         this.age = age;
-        this.gendre = g;
+        this.gender = gender;
     }
 
     public void eat() {
         System.out.println(name + " is eating");
     }
 
-    class Heart{
+    // Inner Class
+    class Heart {
         private double heartRate;
-        public Heart(double heartRate1){
-            this.heartRate=heartRate1;
+
+        public Heart(double heartRate) {
+            this.heartRate = heartRate;
         }
-        public void beat(){
-            System.out.println(name+" heart is beating at "+heartRate);
+
+        public void beat() {
+            System.out.println(name + "'s heart is beating at " + heartRate + " bpm");
         }
     }
-
 }

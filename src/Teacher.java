@@ -1,13 +1,23 @@
 public class Teacher {
-    String name;
+
+    String teacherName;
     String subject;
-    public Teacher(String tName,String subject){
-        this.name=tName;
-        this.subject=subject;
+
+    public Teacher(String teacherName, String subject) {
+        this.teacherName = teacherName;
+        this.subject = subject;
     }
 
-    public void displayTeacher(){
-        System.out.println("Teacher Name Is: " + name);
-        System.out.println("And Teach This Subject: "+subject);
+    public void displayTeacher() {
+        System.out.println("Teacher Name: " + teacherName);
+        System.out.println("Subject: " + subject);
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{\n" +
+                "Name='" + teacherName + "'\n" +
+                "Subject='" + subject + "'\n" +
+                "}";
     }
 }
