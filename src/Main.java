@@ -1,6 +1,9 @@
 public class Main {
-    public static void main(String[] args){
-        Employee e1=new Employee("IK",74,"male",1,"Pakistan");
-        e1.displayDetails();
+
+    public static void main(String[] args) {
+
+        Employee employee = new Employee("IK", 74, "Male", 1, "Pakistan");
+
+        employee.displayDetails();
     }
 }

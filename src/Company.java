@@ -3,36 +3,37 @@ import java.util.List;
 
 public class Company {
 
-    private String projName;
-    private String projType;
-//    private Employee employee;
-    private List<Employee> list;
+    private String projectName;
+    private String projectType;
+    private List<Employee> employees;
 
-    public Company(String projName, String projType, List<Employee> list) {
-        this.projName = projName;
-        this.projType = projType;
-        this.list = list;
+    public Company(String projectName, String projectType, List<Employee> employees) {
+        this.projectName = projectName;
+        this.projectType = projectType;
+        this.employees = employees;
     }
 
-    public void displayInfo(){
-        System.out.println("Project "+ projName);
-        System.out.println("Project Type " + projType);
-        for(Employee e: list){
-            e.displayDetails();
+    public void displayInfo() {
+        System.out.println("Project: " + projectName);
+        System.out.println("Project Type: " + projectType);
+
+        for (Employee employee : employees) {
+            employee.displayDetails();
             System.out.println();
         }
     }
 
-    public static void main(String[] args){
-        Employee e1 = new Employee("IK",74,"male",1,"Pakistan");
-        Employee e2 = new Employee("Ab",22,"male",2,"Pakistan");
+    public static void main(String[] args) {
 
-        List<Employee> list = new ArrayList<>();
-        list.add(e1);
-        list.add(e2);
+        Employee employee1 = new Employee("IK", 74, "Male", 1, "Pakistan");
+        Employee employee2 = new Employee("Ab", 22, "Male", 2, "Pakistan");
 
-        Company c1 = new Company("AI System", "Software", list);
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(employee1);
+        employeeList.add(employee2);
 
-        c1.displayInfo();
+        Company company = new Company("AI System", "Software", employeeList);
+
+        company.displayInfo();
     }
 }
